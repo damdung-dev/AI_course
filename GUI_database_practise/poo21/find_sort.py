@@ -90,7 +90,7 @@ class FindAndSort(object):
             else:
                 result = ""
                 for row in rows:
-                    result += f"ID: {row[0]}, Name: {row[1]}, Semester: {row[2]}, Course Name: {row[3]}\n"  # Sửa theo số cột thực tế của bạn
+                    result += f"ID: {row[0]}\nName: {row[1]}\nSemester: {row[2]}\nCourse Name: {row[3]}"  # Sửa theo số cột thực tế của bạn
                 self.display.setText(result)
 
         except pyodbc.IntegrityError as e:

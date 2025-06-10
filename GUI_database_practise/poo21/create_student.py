@@ -155,13 +155,13 @@ class CreateStudent(object):
         course_name = self.coursename_ledit.text()
         semester = self.semester_ledit.text()
 
-        student_id=student_id.isnumeric()
-        student_name=student_name.isalnum()
-        course_name=course_name.isalnum()
-        semester=semester.isnumeric()
-        conn_result=False
+        studentid_check=student_id.isnumeric()
+        studentname_check=student_name.isnumeric()
+        coursename_check=course_name.isnumeric()
+        semester_check=semester.isnumeric()
+        print(studentid_check,studentname_check,coursename_check,semester_check)
 
-        if student_id==True and student_name==False and course_name==False and semester==True:
+        if studentid_check==True and studentname_check==False and coursename_check==False and semester_check==True:
             if course_name.lower() in list_coursename:
                 server = 'DESKTOP-PICVBQP\SQLEXPRESS'
                 database = 'STUDENTSMANAGEMENT'

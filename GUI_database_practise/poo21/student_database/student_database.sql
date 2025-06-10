@@ -6,7 +6,7 @@ CONTAINMENT = NONE
 ON PRIMARY 
 (
   NAME = N'STUDENTS_MDF',
-  FILENAME = N'D:\python_and_deeplearning_course\GUI_database_practise\poo21\STUDENTS.mdf',
+  FILENAME = N'D:\SDC_course\GUI_database_practise\poo21\STUDENTS.mdf',
   SIZE = 8192KB,
   MAXSIZE = UNLIMITED,
   FILEGROWTH = 65536KB
@@ -14,7 +14,7 @@ ON PRIMARY
 LOG ON 
 (
   NAME = N'STUDENTS_LOG',
-  FILENAME = N'D:\python_and_deeplearning_course\GUI_database_practise\poo21\STUDENTS.ldf',
+  FILENAME = N'D:\SDC_course\GUI_database_practise\poo21\STUDENTS.ldf',
   SIZE = 8192KB,
   MAXSIZE = 2048GB,
   FILEGROWTH = 65536KB
@@ -99,12 +99,10 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[students](
-	[id] [int] NOT NULL,
-	[studentname] [varchar](50) NOT NULL,
-	[semester] [nvarchar](255) NULL,
+	[id] [nvarchar](50) NOT NULL,
+	[studentname] [nvarchar](50) NOT NULL,
+	[semester] [nvarchar](255) NOT NULL,
 	[coursename] [nvarchar](255) NOT NULL,
-	[role_id] [int] NULL,
-	[created_at] [datetime] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
