@@ -1,0 +1,2 @@
+stMan = StudentManagement()
+stMan.run()
